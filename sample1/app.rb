@@ -15,7 +15,7 @@ DATAPOINTS_URL = API_ENDPOINT + "datapoints"
 ACCESS_TOKEN   = ENV['METRO_ACCESS_TOKEN']
 
 # 駅リストの読み込み
-STATION_LIST   = YAML.load_file('stationList.yaml')
+STATION_LIST   = YAML.load_file('sample1/stationList.yaml')
 
 # station_nameに入力された駅名から、
 # ファイルに書かれた駅情報を検索し、結果のリストを返します。

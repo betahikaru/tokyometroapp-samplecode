@@ -16,7 +16,7 @@ ACCESS_TOKEN   = ENV['METRO_ACCESS_TOKEN']
 PLACES_RADIUS  = 300 # Places APIでの検索半径(m)
 
 # 駅リストの読み込み
-STATION_LIST   = YAML.load_file('stationList.yaml')
+STATION_LIST   = YAML.load_file('sample2/stationList.yaml')
 
 # HTTP GET リクエストに対する処理です。
 get '/' do
