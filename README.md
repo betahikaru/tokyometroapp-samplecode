@@ -31,5 +31,8 @@ bundle exec rackup
 
 - http://localhost:9292 にアクセス
 
+- herokuにデプロイ
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ## License
 [東京メトロオープンデータ活用コンテスト用公共交通データAPI利用許諾規約](https://developer.tokyometroapp.jp/terms.html)を参照。

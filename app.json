@@ -1,0 +1,6 @@
+{
+  "name": "Tokyo Metro App Sample",
+  "description": "Sample-code for Tokyo Metro open-data API",
+  "repository": "https://github.com/betahikaru/tokyometroapp-samplecode",
+  "keywords": ["opendata", "ruby", "sinatra"]
+}
