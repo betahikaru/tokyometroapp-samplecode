@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <script>
+      // 現在地を取得する処理です。
+      // 成功時にはコールバックsuccess、エラー時にはコールバックerrorが実行されます。
+      navigator.geolocation.getCurrentPosition(success, error);
+
+      // 位置情報を取得できた場合のコールバックです。テキストボックスに緯度経度を格納します。
+      function success(position) {
+        document.getElementById("lat").value = position.coords.latitude;
+        document.getElementById("lon").value = position.coords.longitude;
+        document.getElementById("position_msg").innerHTML = "デバイスの位置情報を取得しました";
+      }
+
+      // 位置情報取得失敗時のコールバックです。エラーメッセージを表示します。
+      function error(error) {
+        var error_msg = "";
+        switch(error.code)
+        {
+          case error.PERMISSION_DENIED:
+            error_msg = "位置情報の利用を有効にしてください";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            error_msg = "デバイスの位置が判定できませんでした";
+            break;
+          case error.TIMEOUT:
+            error_msg = "位置情報の取得にタイムアウトしました";
+            break;
+        }
+        document.getElementById("position_msg").innerHTML = error_msg;
+      }
+    </script>
+  </head>
+  <body>
+  <h1>列車が駅を出発する時刻を表示します</h1>
+    <p>検索したい位置の緯度経度を入力してください。</p>
+    <p>デバイスの位置情報を取得できる場合、自動で位置情報が入力されます。</p>
+    <form action="/" method="post">
+      <label for="lat">緯度</label>
+      <input name="lat" id="lat" type="text" />
+      <label for="lon">経度</label>
+      <input name="lon" id="lon" type="text" />
+      <input type="submit" value="検索" />
+    </form>
+    <div id="position_msg" style="margin-top:10px;"></div>
+  </body>
+</html>
+
