@@ -1,7 +1,9 @@
+# dotenv
+.env
+
 # Mac
 .DS_Store
 
 # Ruby
 /.bundle/
 vendor/bundle
-
